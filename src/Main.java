@@ -21,8 +21,13 @@ public class Main {
 //        };
 
         //TEST CASE 3; target_val = 1; expected result = TRUE
+//        int data_to_injest[] = new int[]{
+//                1
+//        };
+
+        //TEST CASE 4; target_val = 6; expected result = FALSE
         int data_to_injest[] = new int[]{
-                1
+              1,2,0,3,0,4,0,5
         };
 
         Tree tree = new Tree();
@@ -33,7 +38,7 @@ public class Main {
         //Instantiating Solution class, to check if a target sum inside the tree
         Solution mySolution =  new Solution();
 
-        final int target = 1;
+        final int target = 6;
 
         if (mySolution.hasPathSum(tree.getRoot(), target))
             System.out.printf("Given Target -> %d exists in the Tree", target);
