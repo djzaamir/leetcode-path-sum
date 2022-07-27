@@ -6,14 +6,16 @@ class Solution {
     private boolean hasPathSumCore(TreeNode node, int parent_sum, int target_sum){
         //Base cases
         if(node == null) return false;
-        if (((parent_sum + node.val) == target_sum) && node.left == null && node.right == null) return true;
 
-        boolean left_side_result = this.hasPathSumCore(node.left, parent_sum+node.val, target_sum) ;
+        int curr_sum = parent_sum + node.val;
+        if ((curr_sum == target_sum) && node.left == null && node.right == null) return true;
+
+        boolean left_side_result = this.hasPathSumCore(node.left, curr_sum, target_sum) ;
 
         //Check if target has been achieved, to avoid going through the right side
         if (left_side_result) return true;
 
         //Continue searching for solution in the right-hand side
-        return this.hasPathSumCore(node.right, parent_sum + node.val, target_sum);
+        return this.hasPathSumCore(node.right, curr_sum, target_sum);
     }
 }
