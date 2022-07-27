@@ -8,7 +8,7 @@ public class Main {
         * Then goto the left entry and again input Node, left then right
         * */
         int data_to_injest[] = new int[]{
-                5,4,8,11,0,13,4,7,2,0,0,0,1
+                5,4,8,11,0,13,4,7,2,0,0,0,1,99
         };
 
         Tree tree = new Tree();

@@ -25,11 +25,11 @@ public class Tree {
 
             //Consider 0 nodes as Null nodes
             TreeNode left =  null;
-            if (arr[i] != 0)
+            if ((i) < arr.length && arr[i] != 0)
                 left = new TreeNode(arr[i]);
 
             TreeNode right = null;
-            if (arr[i+1] != 0)
+            if ((i+1) < arr.length && arr[i+1] != 0)
                 right = new TreeNode(arr[i+1]);
 
 
