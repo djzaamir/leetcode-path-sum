@@ -11,6 +11,11 @@ public class Main {
                 5,4,8,11,0,13,4,7,2,0,0,0,1
         };
 
-        System.out.println(data_to_injest.toString());
+        Tree tree = new Tree();
+
+        //Input data in a specific order, defined inside the pushArray method
+        tree.pushArray(data_to_injest);
+
+        tree.printTreePreOrder();
     }
 }
