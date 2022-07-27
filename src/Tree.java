@@ -3,7 +3,7 @@ import java.util.Queue;
 
 public class Tree {
 
-    TreeNode root =  null;
+    private TreeNode root =  null;
     public Tree(){
     }
 
@@ -56,5 +56,7 @@ public class Tree {
         this.printTreePreOrderCore(node.right);
     }
 
-
+    public TreeNode getRoot(){
+        return root;
+    }
 }

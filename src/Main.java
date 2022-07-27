@@ -1,3 +1,5 @@
+import java.security.spec.RSAOtherPrimeInfo;
+
 public class Main {
     public static void main(String[] args) {
         //Binary Tree data to input
@@ -16,6 +18,15 @@ public class Main {
         //Input data in a specific order, defined inside the pushArray method
         tree.pushArray(data_to_injest);
 
-        tree.printTreePreOrder();
+        //Instantiating Solution class, to check if a target sum inside the tree
+        Solution mySolution =  new Solution();
+
+        final int target = 27;
+
+        if (mySolution.hasPathSum(tree.getRoot(), target))
+            System.out.printf("Given Target -> %d exists in the Tree", target);
+        else
+            System.out.printf("Given Target -> %d DOES NOT exists in the Tree", target);
+
     }
 }
